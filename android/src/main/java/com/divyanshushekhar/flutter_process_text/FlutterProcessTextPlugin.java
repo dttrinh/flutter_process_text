@@ -146,13 +146,6 @@ public class FlutterProcessTextPlugin implements FlutterPlugin, ActivityAware {
     context = null;
   }
 
-
-  @SuppressWarnings("deprecation")
-  public static void registerWith(io.flutter.plugin.common.PluginRegistry.Registrar registrar) {
-    final FlutterProcessTextPlugin plugin = new FlutterProcessTextPlugin();
-    plugin.setupChannel(registrar.messenger(), registrar.context(), registrar.activity());
-  }
-
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
     binaryMessenger = flutterPluginBinding.getBinaryMessenger();
